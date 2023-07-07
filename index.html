@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* tag selector */
+      h1 {
+        color: blue;
+      }
+      span {
+        color: brown;
+        background-color: rgb(240, 137, 11);
+      }
+      /* class selector */
+      .border1 {
+        border: 3px solid green;
+      }
+      /* id selecter */
+      #mijn-eerste-div {
+        text-align: center;
+      }
+    </style>
+    <script>
+      // dit is javascript
+
+      let a = 6; // initialisation
+      // let a; // declaration
+      // a = 6; // assignment
+      let test = 123;
+
+      let b;
+      b = 6;
+      let c;
+      c = 7;
+      let e = a + b;
+
+      let f = e >= c;
+
+      var d;
+      d = 8;
+      d += 6;
+
+      let z = b != c;
+
+      console.log("is niet gelijk aan", z);
+
+      let number = 8; // getal
+      let text = "Tekst"; // string
+      let boolean = true; // true or false
+
+      // function declaration
+      function print() {
+        console.log("In print");
+      }
+      // function call
+      print();
+      print();
+
+      function plus(getal1, getal2) {
+        console.log(getal1 + getal2);
+      }
+
+      plus(12, 34);
+      plus(123, 98);
+    </script>
+  </head>
+  <body>
+    <h1>Mijn eerste pagina</h1>
+    <h2>Mijn eerste h2</h2>
+    <!-- inline styling -->
+    <span style="color: rgb(13, 17, 255); background-color: antiquewhite"
+      >Dit is een span</span
+    ><span>Dit is een span 2</span>
+
+    <p>Dit is een paragraaf</p>
+    <p>Dit is een paragraaf</p>
+    <!-- class selector -->
+    <img
+      class="border1"
+      src="bul.png"
+      alt="bulbasaur"
+      height="250"
+      width="250"
+    />
+    <div id="mijn-eerste-div">
+      <a href="second.html">To second page</a>
+    </div>
+    <div>
+      <input type="text" id="getal1" />
+      <input type="text" id="getal2" />
+      <button type="button" onclick="telop()">Optellen</button>
+    </div>
+    <script>
+      function telop() {
+        // input willen uiltezen
+        let getal1Veld = parseInt(document.getElementById("getal1").value);
+        let getal2Veld = parseInt(document.getElementById("getal2").value);
+
+        console.log(getal1Veld + getal2Veld);
+      }
+    </script>
+    <button type="button" onclick="aftrekken()">aftrekken</button>
+    <script>
+      function aftrekken() {
+        let getal1Veld = parseInt(document.getElementById("getal1").value);
+        let getal2Veld = parseInt(document.getElementById("getal2").value);
+
+        console.log(getal1Veld - getal2Veld);
+      }
+    </script>
+    <button type="button" onclick="keer()">keer</button>
+    <script>
+      function keer() {
+        let getal1Veld = parseInt(document.getElementById("getal1").value);
+        let getal2Veld = parseInt(document.getElementById("getal2").value);
+
+        console.log(getal1Veld * getal2Veld);
+      }
+    </script>
+  </body>
+</html>
